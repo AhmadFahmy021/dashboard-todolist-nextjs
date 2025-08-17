@@ -6,12 +6,12 @@ import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 
-type Props = {
+interface Props {
   params: { id: string };
 }
 
-export default async function page({ params }: Props) {
-    
+export default async function Page({ params }: Props) {
+    const { id } = await params;
     return (
         <SidebarProvider
         style={
@@ -38,7 +38,7 @@ export default async function page({ params }: Props) {
                     </div>
                     
                     </div>
-                    <FormCreateShareList id={params.id}/>
+                    <FormCreateShareList id={id}/>
                 </div>
             </div>
         </SidebarInset>

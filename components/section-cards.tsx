@@ -57,7 +57,7 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>Total Todo</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {loading ? "Loading..." : data?.countTodo}
+            {loading ? 0 : data?.countTodo}
           </CardTitle>
         </CardHeader>
       </Card>
@@ -65,7 +65,7 @@ export function SectionCards() {
         <CardHeader>
           <CardDescription>Total List</CardDescription>
           <CardTitle className="text-2xl font-semibold tabular-nums @[250px]/card:text-3xl">
-            {loading ? "Loading..." : data?.countList}
+            {loading ? 0 : data?.countList}
           </CardTitle>
         </CardHeader>
       </Card>

@@ -83,7 +83,7 @@ export default function FormEditList({id}:{id: string}){
     return(
         <form onSubmit={handleSubmit}  className="grid gap-4">
                 <div className="gap-4">
-                    <div className="grid grid-cols-2 gap-2">
+                    <div className="grid lg:grid-cols-2 gap-2">
                         <div className="grid gap-3">
                             <Label htmlFor="title">Title</Label>
                             <Input

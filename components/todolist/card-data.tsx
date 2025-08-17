@@ -97,7 +97,7 @@ export default function CardData() {
             
             {loading && <SkeletonCard/>}
             {data.map((item) => (
-                <Card key={item.id} className="shadow-lg hover:shadow-xl transition-all">
+                <Card key={item.id} className="shadow-lg hover:shadow-xl transition-all border-0 shadow-gray-900">
                     <CardHeader>
                         <CardTitle className="text-2xl font-bold tracking-tight">
                             {item.title ?? "Untitled Task"}

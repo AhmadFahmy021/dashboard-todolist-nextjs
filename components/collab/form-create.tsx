@@ -103,8 +103,8 @@ export default function FormCreateCollab({id}:{id: string}){
                     <Button type="submit" className="w-full" disabled={loading}>
                         {loading?"Loading...":"Save"}
                     </Button>
-                    <Button type="button" className="w-full bg-red-500 hover:bg-red-600" disabled={loading}>
-                        <a href={`/dashboard/todo/collab/${id}`}>
+                    <Button type="button" className="w-full !bg-red-500 hover:!bg-red-600" disabled={loading}>
+                        <a href={`/dashboard/shared/todo/collab/${id}`}>
                             Cancel
                         </a>
                     </Button>

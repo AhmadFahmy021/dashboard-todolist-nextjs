@@ -8,11 +8,11 @@ import { Plus } from "lucide-react";
 import React from "react";
 import { DataTableShareList } from "@/components/share/datatable-list";
 
-interface Props {
+interface TodoDetailPageProps  {
   params: { id: string };
 }
 
-export default async function TodoDetailPage({ params }: Props) {
+export default function TodoDetailPage({ params }: TodoDetailPageProps ) {
     const { id } = params;
     
     return (

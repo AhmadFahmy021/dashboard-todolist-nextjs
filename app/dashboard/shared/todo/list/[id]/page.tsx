@@ -1,4 +1,4 @@
-
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { DataTableList } from "@/components/list/datatable-list";
@@ -8,12 +8,11 @@ import { Plus } from "lucide-react";
 import React from "react";
 import { DataTableShareList } from "@/components/share/datatable-list";
 
+interface TodoDetailPageProps  {
+  params: { id: string };
+}
 
-export default function TodoDetailPage({
-  params,
-}: {
-  params: { id: string }
-}) {
+export default function TodoDetailPage({ params }: TodoDetailPageProps ) {
     const { id } = params;
     
     return (

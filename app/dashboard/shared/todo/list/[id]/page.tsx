@@ -9,7 +9,7 @@ import React from "react";
 
 interface PageProps {
   params: {
-    id: string;
+    id: string
   };
 }
 

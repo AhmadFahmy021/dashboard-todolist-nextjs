@@ -9,6 +9,7 @@ import { Button } from "@/components/ui/button"
 import { Plus } from "lucide-react"
 import CardData from "@/components/todolist/card-data"
 import CardDataShare from "@/components/share/card-data"
+import Link from "next/link"
 
 export default async function Page() {
     return (
@@ -35,11 +36,11 @@ export default async function Page() {
                         Kelola daftar pekerjaan kamu di satu tempat
                         </p>
                     </div>
-                        <a href="/dashboard/todo/create" className="flex items-center gap-1">
+                        <Link href="/dashboard/todo/create" className="flex items-center gap-1">
                             <Button size="sm" className="gap-2 ">
                                     <Plus className="h-4 w-4" /> Tambah Todo
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                     <CardDataShare />
                 </div>

@@ -10,6 +10,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Button } from "../ui/button";
 import { EyeIcon, MoreVertical, PencilIcon, Trash2Icon, TrashIcon, UserRound } from "lucide-react";
 import { IconUsersGroup } from "@tabler/icons-react";
+import Link from "next/link";
 
 interface Todo {
     id: string,
@@ -114,31 +115,31 @@ export default function CardData() {
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
                                     <DropdownMenuLabel>Action</DropdownMenuLabel>
-                                        <a href={`/dashboard/todo/list/${item.id}`}>
+                                        <Link href={`/dashboard/todo/list/${item.id}`}>
                                             <DropdownMenuItem>
                                                 <EyeIcon className="text-green-500"/>
                                                 Show List
                                             </DropdownMenuItem>
-                                        </a>
-                                        <a href={`/dashboard/todo/edit/${item.id}`}>
+                                        </Link>
+                                        <Link href={`/dashboard/todo/edit/${item.id}`}>
                                             <DropdownMenuItem>
                                                 <PencilIcon className="text-blue-500"/>
                                                 Edit Todo
                                             </DropdownMenuItem>
-                                        </a>
-                                        <a href={`/dashboard/todo/collab/${item.id}`}>
+                                        </Link>
+                                        <Link href={`/dashboard/todo/collab/${item.id}`}>
                                             <DropdownMenuItem>
                                                 <IconUsersGroup className="text-yellow-500"/>
                                                 Collabolator
                                             </DropdownMenuItem>
-                                        </a>
+                                        </Link>
                                         
-                                        {/* <a href=""> */}
+                                        {/* <Link href=""> */}
                                             <DropdownMenuItem onClick={() => handleDelete(item.id)}>
                                                 <Trash2Icon className="text-red-500"/>
                                                 Delete Todo
                                             </DropdownMenuItem>
-                                        {/* </a> */}
+                                        {/* </Link> */}
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         </CardAction>

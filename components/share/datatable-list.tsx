@@ -37,6 +37,7 @@ import {
 } from "@/components/ui/table"
 import Cookies from "js-cookie"
 import { toast } from "sonner"
+import Link from "next/link"
 
 // const data: Payment[] = [
 //   {
@@ -147,12 +148,12 @@ export const columns: ColumnDef<List>[] = [
         
         return (
           <div className="">
-              <a href={`/dashboard/shared/todo/list/edit/${id}`} className="gap-2">
+              <Link href={`/dashboard/shared/todo/list/edit/${id}`} className="gap-2">
                   <Button size="sm" className="mr-2">
                       <PencilIcon/>
                       Edit
                   </Button>
-              </a>
+              </Link>
               <Button size="sm" onClick={() => handleDelete(id)} className="bg-red-500 hover:bg-red-600">
                   <Trash2Icon/>
                   Delete

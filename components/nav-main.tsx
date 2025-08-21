@@ -12,6 +12,7 @@ import {
 } from "@/components/ui/sidebar"
 import { cn } from "@/lib/utils"
 import { usePathname } from "next/navigation"
+import Link from "next/link"
 
 export function NavMain({
   items,
@@ -59,10 +60,10 @@ export function NavMain({
                       ? "bg-primary text-primary-foreground hover:bg-primary/90 hover:text-primary-foreground"
                       : "hover:bg-accent hover:text-accent-foreground"
                   )}>
-                  <a href={item.url} className="flex items-center gap-2">
+                  <Link href={item.url} className="flex items-center gap-2">
                     {item.icon && <item.icon />}
                     <span>{item.title}</span>
-                  </a>
+                  </Link>
                 </SidebarMenuButton>
               </SidebarMenuItem>
             );

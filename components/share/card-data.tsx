@@ -10,6 +10,7 @@ import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuLabel,
 import { Button } from "../ui/button";
 import { EyeIcon, MoreVertical, PencilIcon, Trash2Icon, TrashIcon, UserRound } from "lucide-react";
 import { IconUsersGroup } from "@tabler/icons-react";
+import Link from "next/link";
 
 interface Todo {
     id: string,
@@ -119,12 +120,12 @@ export default function CardDataShare() {
                                 </DropdownMenuTrigger>
                                 <DropdownMenuContent>
                                     <DropdownMenuLabel>Action</DropdownMenuLabel>
-                                        <a href={`/dashboard/shared/todo/list/${item.todo.id}`}>
+                                        <Link href={`/dashboard/shared/todo/list/${item.todo.id}`}>
                                             <DropdownMenuItem>
                                                 <EyeIcon className="text-green-500"/>
                                                 Show List
                                             </DropdownMenuItem>
-                                        </a>
+                                        </Link>
                                 </DropdownMenuContent>
                             </DropdownMenu>
                         </CardAction>

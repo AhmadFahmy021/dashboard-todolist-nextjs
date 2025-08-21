@@ -9,6 +9,7 @@ import Cookies from "js-cookie"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
 import { Toaster } from "../ui/sonner"
+import Link from "next/link"
 
 export default function FormEditShareList({id}:{id: string}){
     const [title, setTitle] = useState("");
@@ -122,11 +123,11 @@ export default function FormEditShareList({id}:{id: string}){
                     <Button type="submit" className="w-full" disabled={loading}>
                         {loading?"Loading...":"Save"}
                     </Button>
-                    <a href={`/dashboard/todo/list/${todoId}`}>
+                    <Link href={`/dashboard/todo/list/${todoId}`}>
                         <Button type="button" className="w-full bg-red-500 hover:bg-red-600" disabled={loading}>
                                 Cancel
                         </Button>
-                    </a>
+                    </Link>
                 </div>
         </form>
     )

@@ -6,6 +6,7 @@ import { Button } from "@/components/ui/button";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Plus } from "lucide-react";
 import React from "react";
+import Link from "next/link";
 
 interface Props {
   params: { id: string };
@@ -38,11 +39,11 @@ export default async function TodoDetailPage({ params }: Props) {
                         Kelola daftar pekerjaan kamu di satu tempat
                         </p>
                     </div>
-                    <a href={`/dashboard/todo/list/create/${id}`} className="flex items-center gap-1">
+                    <Link href={`/dashboard/todo/list/create/${id}`} className="flex items-center gap-1">
                         <Button size="sm" className="gap-2">
                                 <Plus className="h-4 w-4" /> Tambah List Todo
                         </Button>
-                    </a>
+                    </Link>
                     </div>
                     <DataTableList id={id}/>
                 </div>

@@ -8,6 +8,7 @@ import React from "react";
 import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import { DataTableCollab } from "@/components/collab/datatable-collab";
+import Link from "next/link";
 
 interface Props {
   params: { id: string };
@@ -39,11 +40,11 @@ export default async function page({ params }: Props) {
                                 Kelola daftar pekerjaan kamu di satu tempat
                             </p>
                         </div>
-                        <a href={`/dashboard/todo/collab/create/${id}`} className="flex items-center gap-1">
+                        <Link href={`/dashboard/todo/collab/create/${id}`} className="flex items-center gap-1">
                             <Button size="sm" className="gap-2 ">
                                     <Plus className="h-4 w-4" /> Tambah User Collab
                             </Button>
-                        </a>
+                        </Link>
                     </div>
                     <DataTableCollab id={id}/>
                 </div>

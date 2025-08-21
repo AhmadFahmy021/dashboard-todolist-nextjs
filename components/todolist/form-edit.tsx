@@ -9,6 +9,7 @@ import Cookies from "js-cookie"
 import { toast } from "sonner"
 import { useRouter } from "next/navigation"
 import { Toaster } from "../ui/sonner"
+import Link from "next/link"
 
 export default function FormEditTodo({id}:{id: string}){
     const [title, setTitle] = useState("");
@@ -105,9 +106,9 @@ export default function FormEditTodo({id}:{id: string}){
                         {loading?"Loading...":"Save"}
                     </Button>
                     <Button type="button" className="w-full bg-red-500 hover:bg-red-600" disabled={loading}>
-                        <a href="/dashboard/todo">
+                        <Link href="/dashboard/todo">
                             Cancel
-                        </a>
+                        </Link>
                     </Button>
                 </div>
         </form>

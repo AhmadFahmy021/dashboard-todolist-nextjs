@@ -23,7 +23,7 @@ export function RegisterForm({
     e.preventDefault()
     setLoading(true)
     try {
-      const res = await fetch(`http://127.0.0.1:8000/api/register`, {
+      const res = await fetch(`${apiURL}/register`, {
         method: "POST",
         credentials: "include",
         headers: {

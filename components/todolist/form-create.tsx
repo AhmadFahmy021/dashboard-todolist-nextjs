@@ -26,7 +26,7 @@ export default function FormCreateTodo(){
         setError("");
 
         try {
-            const res = await fetch(`http://127.0.0.1:8000/api/todo`, {
+            const res = await fetch(`${apiURL}/todo`, {
                 method: "POST",
                 credentials: "include",
                 headers: {

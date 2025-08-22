@@ -7,13 +7,7 @@ import { Plus } from "lucide-react";
 import Link from "next/link";
 import React from "react";
 
-// interface PageProps {
-//   params: {
-//     id: string
-//   };
-// }
-
-export default function page({ params }: { params: { id: string } }) {
+export default async function Page({ params }: { params: { id: string } }) {
   const { id } = params;
 
   return (

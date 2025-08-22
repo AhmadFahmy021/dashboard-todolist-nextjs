@@ -28,19 +28,14 @@ export default async function Page() {
                 <div className="@container/main flex flex-1 flex-col gap-2 m-5">
                     {/* Header Section */}
                     <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 ">
-                    <div>
-                        <h1 className="text-3xl font-bold tracking-tight">
-                        Todo List
-                        </h1>
-                        <p className="text-muted-foreground text-base">
-                        Kelola daftar pekerjaan kamu di satu tempat
-                        </p>
-                    </div>
-                        <Link href="/dashboard/todo/create" className="flex items-center gap-1">
-                            <Button size="sm" className="gap-2 ">
-                                    <Plus className="h-4 w-4" /> Tambah Todo
-                            </Button>
-                        </Link>
+                        <div>
+                            <h1 className="text-3xl font-bold tracking-tight">
+                            Todo List
+                            </h1>
+                            <p className="text-muted-foreground text-base">
+                            Kelola daftar pekerjaan kamu di satu tempat
+                            </p>
+                        </div>
                     </div>
                     <CardDataShare />
                 </div>

@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation"
 import { Toaster } from "../ui/sonner"
 import Link from "next/link"
 
-export default function FormCreateList({id}:{id: string}){
+export default function FormCreateList({id}:{id: string | any}){
     const [title, setTitle] = useState("");
     const [description, setDescription] = useState("");
     const [todoId, setTodoID] = useState("");

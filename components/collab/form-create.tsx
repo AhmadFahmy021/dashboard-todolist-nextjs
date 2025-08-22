@@ -11,7 +11,7 @@ import { useRouter } from "next/navigation"
 import { Toaster } from "../ui/sonner"
 import Link from "next/link"
 
-export default function FormCreateCollab({id}:{id: string}){
+export default function FormCreateCollab({id}:{id: string | any}){
     const [todoId, setTodoID] = useState("");
     const [userId, setUserId] = useState("");
     const [data, setData] = useState([]);

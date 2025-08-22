@@ -1,3 +1,4 @@
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { DataTableShareList } from "@/components/share/datatable-list";
@@ -6,9 +7,11 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import { Plus } from "lucide-react";
 import Link from "next/link";
 import React from "react";
+import { useParams } from "next/navigation";
 
-export default async function Page({ params }: { params: { id: string } }) {
-  const { id } = params;
+export default function page() {
+  const params = useParams();
+  const id = params?.id
 
   return (
     <SidebarProvider

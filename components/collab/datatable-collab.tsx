@@ -109,7 +109,7 @@ export const columns: ColumnDef<List>[] = [
 
 ]
 
-export function DataTableCollab({id}:{id:string}) {
+export function DataTableCollab({id}:{id:string | any}) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []

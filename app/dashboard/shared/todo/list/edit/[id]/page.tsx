@@ -1,4 +1,4 @@
-
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { DataTableList } from "@/components/list/datatable-list";
@@ -6,10 +6,12 @@ import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 import FormEditList from "@/components/list/form-edit";
 import FormEditShareList from "@/components/share/form-edit";
+import { useParams } from "next/navigation";
 
 
-export default async function TodoDetailPage({ params }: { params: { id: string } }) {
-    const { id } = params;
+export default async function page() {
+    const params = useParams();
+    const id = params?.id
     
     return (
         <SidebarProvider

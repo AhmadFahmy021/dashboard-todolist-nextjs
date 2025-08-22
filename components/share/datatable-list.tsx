@@ -165,7 +165,7 @@ export const columns: ColumnDef<List>[] = [
 
 ]
 
-export function DataTableShareList({id}:{id:string}) {
+export function DataTableShareList({id}:{id:string | any}) {
   const [sorting, setSorting] = React.useState<SortingState>([])
   const [columnFilters, setColumnFilters] = React.useState<ColumnFiltersState>(
     []

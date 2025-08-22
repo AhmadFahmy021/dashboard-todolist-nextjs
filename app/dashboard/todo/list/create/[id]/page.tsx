@@ -1,12 +1,15 @@
-
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import FormCreateList from "@/components/list/form-create";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { useParams } from "next/navigation";
 import React from "react";
 
-export default async function page({ params }: { params: { id: string } }) {
-    
+export default  function page() {
+    const params = useParams()
+    const id = params?.id
+
     return (
         <SidebarProvider
         style={
@@ -33,7 +36,7 @@ export default async function page({ params }: { params: { id: string } }) {
                     </div>
                     
                     </div>
-                    <FormCreateList id={params.id}/>
+                    <FormCreateList id={id}/>
                 </div>
             </div>
         </SidebarInset>

@@ -17,7 +17,7 @@ import CardData from "@/components/todolist/card-data"
 import Cookies from "js-cookie"
 import FormCreateTodo from "@/components/todolist/form-create"
 
-export default async function Page() {
+export default function Page() {
     return (
         <SidebarProvider
         style={

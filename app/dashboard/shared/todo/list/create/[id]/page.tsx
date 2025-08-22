@@ -1,14 +1,17 @@
-
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import FormCreateList from "@/components/list/form-create";
 import FormCreateShareList from "@/components/share/form-create";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
+import { useParams } from "next/navigation";
 import React from "react";
 
 
-export default async function Page({ params }: { params: { id: string } }) {
-    const { id } = await params;
+export default function page() {
+    const params = useParams();
+    const id = params?.id 
+
     return (
         <SidebarProvider
         style={

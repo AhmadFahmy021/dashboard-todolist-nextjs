@@ -1,4 +1,4 @@
-
+"use client"
 import { AppSidebar } from "@/components/app-sidebar";
 import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
@@ -7,9 +7,11 @@ import { Button } from "@/components/ui/button";
 import { Plus } from "lucide-react";
 import FormCreateCollab from "@/components/collab/form-create";
 import Link from "next/link";
+import { useParams } from "next/navigation";
 
-export default async function page({ params }: { params: { id: string } }) {
-    const { id } = params;
+export default async function page() {
+    const params = useParams()
+    const id = params?.id
     
     return (
         <SidebarProvider

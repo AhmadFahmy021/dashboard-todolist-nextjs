@@ -8,11 +8,7 @@ import { Plus } from "lucide-react";
 import FormCreateCollab from "@/components/collab/form-create";
 import Link from "next/link";
 
-interface Props {
-  params: { id: string };
-}
-
-export default async function page({ params }: Props) {
+export default async function page({ params }: { params: { id: string } }) {
     const { id } = params;
     
     return (

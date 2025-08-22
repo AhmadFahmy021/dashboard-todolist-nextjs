@@ -7,11 +7,8 @@ import React from "react";
 import FormEditList from "@/components/list/form-edit";
 import FormEditShareList from "@/components/share/form-edit";
 
-interface Props {
-  params: { id: string };
-}
 
-export default async function TodoDetailPage({ params }: Props) {
+export default async function TodoDetailPage({ params }: { params: { id: string } }) {
     const { id } = params;
     
     return (

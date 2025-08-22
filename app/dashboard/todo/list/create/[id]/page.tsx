@@ -5,11 +5,7 @@ import { SiteHeader } from "@/components/site-header";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 
-type Props = {
-  params: { id: string };
-}
-
-export default async function page({ params }: Props) {
+export default async function page({ params }: { params: { id: string } }) {
     
     return (
         <SidebarProvider

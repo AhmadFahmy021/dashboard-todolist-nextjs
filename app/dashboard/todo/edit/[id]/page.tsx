@@ -6,11 +6,7 @@ import FormEditTodo from "@/components/todolist/form-edit";
 import { SidebarInset, SidebarProvider } from "@/components/ui/sidebar";
 import React from "react";
 
-interface Props {
-  params: { id: string };
-}
-
-export default async function page({ params }: Props) {
+export default async function page({ params }: { params: { id: string } }) {
     const { id } = params;
     
     return (

@@ -363,11 +363,15 @@ export function DataTableShareList({id}:{id:string}) {
                 table.setPageSize(Number(e.target.value))
             }}
             >
-            {[5, 10, 25, data.length].map((pageSize) => (
-                <option key={pageSize} value={pageSize}>
-                {pageSize === data.length ? "All" : pageSize}
+              {[5, 10, 25].map((pageSize, idx) => (
+                <option key={`size-${idx}-${pageSize}`} value={pageSize}>
+                  {pageSize}
                 </option>
-            ))}
+              ))}
+
+              <option key="size-all" value={data.length}>
+                All
+              </option>
             </select>
         </div>
         {/* <div className="flex items-center space-x-2 ">

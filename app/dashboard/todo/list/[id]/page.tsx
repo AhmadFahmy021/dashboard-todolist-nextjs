@@ -8,11 +8,7 @@ import { Plus } from "lucide-react";
 import React from "react";
 import Link from "next/link";
 
-interface Props {
-  params: { id: string };
-}
-
-export default async function TodoDetailPage({ params }: Props) {
+export default async function TodoDetailPage({ params }: { params: { id: string } }) {
     const { id } = params;
     
     return (
